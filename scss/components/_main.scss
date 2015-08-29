@@ -8,27 +8,137 @@
 
 ::selection {background-color: black; color: white;}
 
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 100%;
+    font-family: "letter-gothic-std", monospace;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    width: calc(100% - 42px);
+    margin: 21px auto;
+    background-color: white;
+}
+
+.container {
+    background-color: #ddf4f6;
+    padding: 8.333333333%;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  line-height: 1.56;
+}
+
+h1, .uno {
+    font-size: 3.0625rem;
+}
+
+h2, .dos {
+    font-size: 1.945rem;
+}
+
+h3, .tres {
+    font-size: 1.25rem;
+}
+
+.reg {
+    font-size: 1rem;
+}
+
+.font_small {
+    font-size: .8rem;
+}
+
+em {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.all-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.neuzeit {
+    font-family: "neuzeit-grotesk",sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0.04em;
+}
+
+.neuzeit i {
+    font-family: "letter-gothic-std", monospace;
+}
+
+.cooper, figcaption h2 {
+    font-family: "cooper-black-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cooper-italic {
+    font-family: "cooper-black-std", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
 .flex-img {
     display: block;
     width: 100%;
     margin: 0 auto;
 }
 
-.no-spacing {
-	margin: 0;
+nav {
+    ul {
+        li {
+            display: inline-block;
+            a {
+                text-decoration: none;
+                font-size: 1rem;
+            }
+        }
+    }
+    .instagram-link {
+        font-size: .875rem;
+        letter-spacing: 0.04em;
+    }
 }
 
-.push-top-1 {
-    display: block;
-    margin-top: 15px;
+#work {
+    figcaption {
+        h2 a {
+            text-decoration: none;
+        }
+        h3 {
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+    }
 }
 
-.push-top-2 {
-    display: block;
-    margin-top: 22.5px;
-}
-
-.push-top-3 {
-    display: block;
-    margin-top: 30px;
+.team {
+    figcaption {
+        h3 {
+            font-size: .8rem;
+            text-decoration: underline;
+            display: inline;
+        }
+        p {
+            display: inline;
+        }
+        ul li {
+            display: inline-block;
+        }
+    }
 }
