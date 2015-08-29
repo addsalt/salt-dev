@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="handheldfriendly" content="true">
+	<meta name="mobileoptimized" content="240">
+	<meta name="viewport" content="width=device-width,intial-scale=1">
+	<meta name="description" content="Tek-AV is an Ottawa-based contracting service specializing in the installation of home comfort, entertainment and technology.">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Salt. Ideas that taste good.</title>
+</head>
+	
+<body>
+
+    <header>
+        <nav>
+            <a id="salt-logo" href="/"></a>
+            <ul>
+                <li><a class="smooth-scroll" href="#work">Work</a></li>
+                <li><a class="smooth-scroll" href="#about">About</a></li>
+                <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                <li class="instagram-link"><a href="http://wwww.instagram.com/just_addsalt">just_addsalt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        
+        <nav id="project-nav">
+            <a class="previous" href="#">Prev Project</a>
+            <a class="next" href="#">Next Project</a>
+        </nav>
+        
+        <img class="flex-img" src="http://www.placehold.it">
+        <div class="project-intro">
+            <h1>Agora</h1>
+            <h2>Branding, Stationery Design, Advertising Collateral.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac tincidunt turpis. Sed semper malesuada tempor. Quisque iaculis lectus id lectus interdum laoreet.</p>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <p>© 2015 Salt.</p>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//use.typekit.net/atz8vuw.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+        $(function() {
+          $('.smooth-scroll').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 500);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
+</body>
+</html>
