@@ -1646,6 +1646,18 @@ nav .instagram-link a:hover i {
   padding-bottom: 11.11%;
 }
 
+#work figcaption h2 {
+  line-height: 1;
+  margin-top: 5%;
+}
+
+@media only screen and (min-width: 38em) {
+  #work figcaption h2 {
+    margin-top: 0;
+    line-height: 1.56;
+  }
+}
+
 #work figcaption aside:nth-child(2) {
   margin-top: .75rem;
 }
