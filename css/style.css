@@ -2110,7 +2110,7 @@ footer p {
 
 .project-intro h2 {
   font-size: .75rem;
-  line-height: .75;
+  line-height: 1.25;
   margin: 3.125rem auto 2.785rem;
   font-family: "neuzeit-grotesk",sans-serif;
   font-weight: 700;
