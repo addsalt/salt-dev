@@ -1,0 +1,114 @@
+// Internal
+
+
+.internal {
+    padding: 0;
+    color: #464646;
+}
+
+.internal .container {
+    background-color: white;
+}
+
+.project-nav {
+    position: fixed;
+    background-color: white;
+    text-align: center;
+    height: 10rem;
+    margin: 0;
+    width: 27px;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    a {
+        font-size: .75rem;
+        line-height: 1;
+        color: #464646;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+#prev, #next {
+    display: block;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+#next a, #prev a {
+    display: block;
+    width: 10rem;
+    height: 27px;
+    float: left;
+    i {
+        color: #464646;
+        display: inline-block;
+        font-size: 1.1rem;
+    }
+}
+
+#prev a {
+    transform-origin: left top;
+    -webkit-transform: rotate(270deg) translateX(-100%) translateY(3px);
+    transform: rotate(270deg) translateX(-100%) translateY(3px);
+    i {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+#next a {
+    transform-origin: left top;
+    -webkit-transform: rotate(90deg) translateY(-23px);
+    transform: rotate(90deg) translateY(-23px);
+    i {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+#prev:hover {
+    left: 1rem;
+}
+
+#next:hover {
+    right: 1rem;
+}
+
+.project-intro {
+    width: 75%;
+    margin: 0 auto;
+    max-width: 2360px;
+    text-align: center;
+    h1 {
+        font-family: "cooper-black-std", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 4.75rem;
+        letter-spacing: -0.04em;
+        margin-top: -2rem;
+        line-height: .85;
+    }
+    h2 {
+        font-size: .75rem;
+        line-height: .75;
+        margin: 3.125rem auto 2.785rem;
+        font-family: "neuzeit-grotesk",sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+    }
+    p {
+        margin-bottom: 3.125rem;
+    }
+}

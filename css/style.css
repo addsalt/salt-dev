@@ -1384,15 +1384,16 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
   font-size: 100%;
   font-family: "letter-gothic-std", monospace;
   font-weight: 700;
   font-style: normal;
   letter-spacing: 0.02em;
-  width: -webkit-calc(100% - 42px);
-  width: calc(100% - 42px);
-  margin: 21px auto;
+  width: -webkit-calc(100% - 36px);
+  width: calc(100% - 36px);
+  margin: 18px auto;
   background-color: white;
   color: #d33f39;
   text-rendering: optimizeLegibility;
@@ -1416,6 +1417,11 @@ header, #intro, #work figcaption, .max-width, footer p {
   width: 83.33333334%;
   margin: 0 auto;
   max-width: 2360px;
+}
+
+header {
+  padding-top: .35rem;
+  padding-bottom: 1.95rem;
 }
 
 .container {
@@ -1482,12 +1488,6 @@ em {
   font-style: normal;
 }
 
-.cooper-italic {
-  font-family: "cooper-black-std", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-}
-
 .flex-img {
   display: block;
   width: 100%;
@@ -1519,13 +1519,16 @@ nav #salt-logo {
 @media only screen and (min-width: 60em) {
   nav #salt-logo {
     width: 37.5%;
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+        transform: translateY(2px);
   }
 }
 
 nav ul {
   display: inline-block;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: .85rem;
 }
 
 @media only screen and (min-width: 60em) {
@@ -1557,7 +1560,7 @@ nav ul li a {
 }
 
 nav .instagram-link {
-  font-size: .875rem;
+  font-size: .375rem;
   letter-spacing: 0.04em;
   margin-top: 0.75rem;
 }
@@ -1589,6 +1592,12 @@ nav .instagram-link a:hover i {
 @media only screen and (min-width: 36em) {
   #intro h1, #intro .dos {
     font-size: 1.945rem;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  #intro h1, #intro .dos {
+    margin-top: 3rem;
   }
 }
 
@@ -1911,6 +1920,16 @@ footer p {
   padding-bottom: 1.75rem;
 }
 
+.kern-2 {
+  display: inline-block;
+  margin-left: -3px;
+}
+
+.kern-8 {
+  display: inline-block;
+  margin-left: -9px;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url("../font/fontello.eot?91561001");
@@ -1976,3 +1995,130 @@ footer p {
 }
 
 /* '' */
+.internal {
+  padding: 0;
+  color: #464646;
+}
+
+.internal .container {
+  background-color: white;
+}
+
+.project-nav {
+  position: fixed;
+  background-color: white;
+  text-align: center;
+  height: 10rem;
+  margin: 0;
+  width: 27px;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+
+.project-nav a {
+  font-size: .75rem;
+  line-height: 1;
+  color: #464646;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#prev, #next {
+  display: block;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+#prev {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
+#next a, #prev a {
+  display: block;
+  width: 10rem;
+  height: 27px;
+  float: left;
+}
+
+#next a i, #prev a i {
+  color: #464646;
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+#prev a {
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: rotate(270deg) translateX(-100%) translateY(3px);
+  -ms-transform: rotate(270deg) translateX(-100%) translateY(3px);
+      transform: rotate(270deg) translateX(-100%) translateY(3px);
+}
+
+#prev a i {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+}
+
+#next a {
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: rotate(90deg) translateY(-23px);
+  -ms-transform: rotate(90deg) translateY(-23px);
+      transform: rotate(90deg) translateY(-23px);
+}
+
+#next a i {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+}
+
+#prev:hover {
+  left: 1rem;
+}
+
+#next:hover {
+  right: 1rem;
+}
+
+.project-intro {
+  width: 75%;
+  margin: 0 auto;
+  max-width: 2360px;
+  text-align: center;
+}
+
+.project-intro h1 {
+  font-family: "cooper-black-std", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 4.75rem;
+  letter-spacing: -0.04em;
+  margin-top: -2rem;
+  line-height: .85;
+}
+
+.project-intro h2 {
+  font-size: .75rem;
+  line-height: .75;
+  margin: 3.125rem auto 2.785rem;
+  font-family: "neuzeit-grotesk",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.project-intro p {
+  margin-bottom: 3.125rem;
+}
