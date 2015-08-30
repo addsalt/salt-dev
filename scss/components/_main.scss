@@ -48,12 +48,16 @@ header, #intro, #work figcaption, .max-width, footer p {
 }
 
 header {
-    padding-top: .35rem;
+    padding-top: 1.25rem;
     padding-bottom: 1.95rem;
+    @media only screen and (min-width: 65em) {
+        padding-top: 0.35rem;
+    }
 }
 
 .container {
     background-color: #ddf4f6;
+    background-color: rgba(0,1,0,.03);
 }
 
 p {margin-bottom: 1.3em; line-height: 1.56;}
@@ -119,6 +123,15 @@ em {
     margin: 0 auto;
 }
 
+.arrow-bounce {
+    i {
+        display: none;
+        @media only screen and (min-width: 28em) {
+            display: inline-block;
+        }
+    }
+}
+
 .arrow-bounce, .we-like a {
     i {
         margin-left: 0px;
@@ -138,10 +151,8 @@ nav {
         background-position: left top;
         display: inline-block;
         width: 100%;
-        @media only screen and (min-width: 60em) {
+        @media only screen and (min-width: 45em) {
             width: 37.5%;
-            -webkit-transform: translateY(2px);
-            transform: translateY(2px);
         }
         height: 1.875rem;
         text-indent: 9999px;
@@ -151,14 +162,17 @@ nav {
         display: inline-block;
         width: 100%;
         margin-top: .85rem;
-        @media only screen and (min-width: 60em) {
-            width: 62%;
+        @media only screen and (min-width: 45em) {
+            width: 61%;
         }
         li {
             display: inline-block;
             width: 32.05%;
-            @media only screen and (min-width: 60em) {
-                width: 25%;
+            @media only screen and (min-width: 45em) {
+                width: 32.05%;
+            }
+            @media only screen and (min-width: 65em) {
+                width: 22.95%;
             }
             &:last-child {
                 width: auto;
@@ -175,6 +189,10 @@ nav {
         font-size: .375rem;
         letter-spacing: 0.04em;
         margin-top: 0.75rem;
+        display: none;
+        @media only screen and (min-width: 65em) {
+            display: inline-block;
+        }
         a {
             -webkit-transition: all 120ms ease-in;
             transition: all 120ms ease-in;
@@ -210,12 +228,12 @@ nav {
         line-height: 1;
         display: inline-block;
         text-decoration: none;
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        padding-bottom: 0px;
         a {
             text-decoration: none;
             display: inline-block;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            padding-bottom: 0px;
             i {
                 display: inline-block;
                 margin-left: 0px;
@@ -226,10 +244,18 @@ nav {
                 display: inline-block;
                 margin-left: 10px;
             }
+            &:first-child {
+                padding-right: 6px;
+            }
+        }
+        .white {
+            padding-left: 9px;
+            color: white;
+            border-bottom-color: white;
         }
         @media only screen and (min-width: 38em) {
             display: inline-block;
-            margin-top: 6rem;
+            margin-top: 6.1rem;
             margin-bottom: 4rem;
             margin-left: 1.25rem;
             float: left;

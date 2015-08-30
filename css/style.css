@@ -1420,12 +1420,19 @@ header, #intro, #work figcaption, .max-width, footer p {
 }
 
 header {
-  padding-top: .35rem;
+  padding-top: 1.25rem;
   padding-bottom: 1.95rem;
+}
+
+@media only screen and (min-width: 65em) {
+  header {
+    padding-top: 0.35rem;
+  }
 }
 
 .container {
   background-color: #ddf4f6;
+  background-color: rgba(0, 1, 0, 0.03);
 }
 
 p {
@@ -1494,6 +1501,16 @@ em {
   margin: 0 auto;
 }
 
+.arrow-bounce i {
+  display: none;
+}
+
+@media only screen and (min-width: 28em) {
+  .arrow-bounce i {
+    display: inline-block;
+  }
+}
+
 .arrow-bounce i, .we-like a i {
   margin-left: 0px;
   -webkit-transition: all 120ms ease-in;
@@ -1516,12 +1533,9 @@ nav #salt-logo {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 45em) {
   nav #salt-logo {
     width: 37.5%;
-    -webkit-transform: translateY(2px);
-    -ms-transform: translateY(2px);
-        transform: translateY(2px);
   }
 }
 
@@ -1531,9 +1545,9 @@ nav ul {
   margin-top: .85rem;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 45em) {
   nav ul {
-    width: 62%;
+    width: 61%;
   }
 }
 
@@ -1542,9 +1556,15 @@ nav ul li {
   width: 32.05%;
 }
 
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 45em) {
   nav ul li {
-    width: 25%;
+    width: 32.05%;
+  }
+}
+
+@media only screen and (min-width: 65em) {
+  nav ul li {
+    width: 22.95%;
   }
 }
 
@@ -1563,6 +1583,13 @@ nav .instagram-link {
   font-size: .375rem;
   letter-spacing: 0.04em;
   margin-top: 0.75rem;
+  display: none;
+}
+
+@media only screen and (min-width: 65em) {
+  nav .instagram-link {
+    display: inline-block;
+  }
 }
 
 nav .instagram-link a {
@@ -1606,14 +1633,14 @@ nav .instagram-link a:hover i {
   line-height: 1;
   display: inline-block;
   text-decoration: none;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  padding-bottom: 0px;
 }
 
 #intro .vertical-link a {
   text-decoration: none;
   display: inline-block;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-bottom: 0px;
 }
 
 #intro .vertical-link a i {
@@ -1628,10 +1655,20 @@ nav .instagram-link a:hover i {
   margin-left: 10px;
 }
 
+#intro .vertical-link a:first-child {
+  padding-right: 6px;
+}
+
+#intro .vertical-link .white {
+  padding-left: 9px;
+  color: white;
+  border-bottom-color: white;
+}
+
 @media only screen and (min-width: 38em) {
   #intro .vertical-link {
     display: inline-block;
-    margin-top: 6rem;
+    margin-top: 6.1rem;
     margin-bottom: 4rem;
     margin-left: 1.25rem;
     float: left;
