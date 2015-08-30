@@ -1370,12 +1370,12 @@ body, html {
 }
 
 ::-moz-selection {
-  background-color: black;
+  background-color: #464646;
   color: white;
 }
 
 ::selection {
-  background-color: black;
+  background-color: #464646;
   color: white;
 }
 
