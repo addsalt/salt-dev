@@ -21,26 +21,46 @@ body {
     width: calc(100% - 42px);
     margin: 21px auto;
     background-color: white;
+    color: #d33f39;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+}
+
+body a {
+    color: #d33f39;
+}
+
+header, #intro, #work figcaption, .max-width, footer p {
+    padding-top: 8.333333333%;
+    padding-bottom: 8.333333333%;
+    width: 83.33333334%;
+    margin: 0 auto;
+    max-width: 2360px;
 }
 
 .container {
     background-color: #ddf4f6;
-    padding: 8.333333333%;
 }
 
-p {margin-bottom: 1.3em;}
+p {margin-bottom: 1.3em; line-height: 1.56;}
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
   line-height: 1.56;
 }
 
 h1, .uno {
-    font-size: 3.0625rem;
+    font-size: 3.046875rem;
 }
 
 h2, .dos {
-    font-size: 1.945rem;
+    font-size: 1.25rem;
 }
 
 h3, .tres {
@@ -99,46 +119,245 @@ em {
 }
 
 nav {
+    #salt-logo {
+        background-image: url(/images/salt.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left top;
+        display: inline-block;
+        width: 100%;
+        @media only screen and (min-width: 60em) {
+            width: 37.5%;
+        }
+        height: 1.875rem;
+        text-indent: 9999px;
+        overflow: hidden;
+    }
     ul {
+        display: inline-block;
+        width: 100%;
+        margin-top: 1rem;
+        @media only screen and (min-width: 60em) {
+            width: 62%;
+        }
         li {
             display: inline-block;
+            width: 25%;
+            &:last-child {
+                width: auto;
+            }
             a {
                 text-decoration: none;
+                line-height: 1;
                 font-size: 1rem;
+                color: #464646;
             }
         }
     }
     .instagram-link {
         font-size: .875rem;
         letter-spacing: 0.04em;
+        margin-top: 0.75rem;
+        /*@media only screen and (min-width: 38em) {
+            margin-top: 0rem;
+        }*/
+        i {
+            margin-right: 8px;
+        }
+    }
+}
+
+#intro {
+    h1, .dos {
+        font-size: 1.25rem;
+        @media only screen and (min-width: 36em) {
+            font-size: 1.945rem;
+        }
+    }
+    .vertical-link {
+        display: block;
+        margin-top: 1rem;
+        @media only screen and (min-width: 38em) {
+            display: inline-block;
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            margin-left: -4rem;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
     }
 }
 
 #work {
     figcaption {
+        padding-top: 3.125%;
+        padding-bottom: 11.11%;
+        aside:nth-child(2) {
+            margin-top: .75rem;
+            p {
+                font-size: 1rem;
+                margin-bottom: .75rem;
+            }
+            a {
+                font-size: .8rem;
+            }
+        }
+        @media only screen and (min-width: 60em) {
+            padding-top: 11.11%;
+            padding-bottom: calc(11.11% - 2.675rem);
+            aside:first-child {
+                margin-top: -5.35rem;
+            }
+            aside:nth-child(2) {
+                margin-top: 0rem;
+                p {
+                    font-size: 1.25rem;
+                    margin-bottom: .75rem;
+                }
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
         h2 a {
             text-decoration: none;
+            letter-spacing: -0.025em;
         }
         h3 {
             font-size: .8rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
+            width: 75%;
+            margin-top: .75rem;
+        }
+    }
+}
+#about {
+    background-color: rgba(0,0,0,.05);
+    color: #464646;
+    a {
+        color: #464646;
+    }
+    .about-bottom {
+        margin-top: 6rem;
+        padding-top: 3.25rem;
+        border-top: dotted 1px #464646;
+    }
+    #contact {
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                line-height: 1.56;
+                &:last-child {
+                    margin-top: .75rem;
+                }
+            }
+            i {
+                margin-right: 8px;
+            }
+        }
+        @media only screen and (min-width: 60em) {
+            width: calc(50% - .85rem);
+        }
+    }
+    #team {
+        figure {
+            margin-top: 1.3333rem;
+            &:nth-child(3) {
+                margin-top: 2.66666rem;
+            }
+            &:nth-child(4) {
+                margin-top: 2.66666rem;
+            }
+            img {
+                width: 3.75rem;
+                margin-right: 1rem;
+                display: inline-block;
+            }
+            @media only screen and (min-width: 60em) {
+                width: 75%;
+            }
+            figcaption {
+                width: calc(100%-4.75rem);
+                margin-left: 4.75rem;
+                margin-top: -4.495rem;
+                display: inline-block;
+                h3 {
+                    font-size: .8rem;
+                    text-decoration: underline;
+                    display: inline;
+                }
+                p {
+                    font-size: .8rem;
+                    display: inline;
+                }
+                ul {
+                    margin-top: .75rem;
+                    li {
+                        display: inline-block;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        margin-right: .75rem;
+                        overflow: hidden;
+                        a {
+                            text-decoration: none;
+                        }
+                        &:first-child {
+                            padding-top:  1px;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+    #services {
+        h2 {
+            margin-bottom: 1rem;
+            margin-top: 1.75rem;
+            
+        }
+        @media only screen and (min-width: 60em) {
+            .no-margin-top {
+                margin-top: 0;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                line-height: 2;
+                margin-left: 1rem;
+                &:before {
+                    content: '–';
+                    position: absolute;
+                    left: -1rem;
+                }
+            }
+        }
+        .we-like {
+            @media only screen and (min-width: 60em) {
+                margin-top: -7px;
+            }
+            li {
+                line-height: 2.5;
+            }
         }
     }
 }
 
-.team {
-    figcaption {
-        h3 {
-            font-size: .8rem;
-            text-decoration: underline;
-            display: inline;
-        }
-        p {
-            display: inline;
-        }
-        ul li {
-            display: inline-block;
-        }
+footer {
+    background-color: rgba(0,0,0,.05);
+    color: #464646;
+    text-align: center;
+    p {
+        font-size: .625rem;
+        text-transform: uppercase;
+        border-top: dotted 1px #464646;
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
     }
 }
+

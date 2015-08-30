@@ -741,6 +741,12 @@ body, html {
 }
 
 @media only screen and (min-width: 60em) {
+  .gutter-right {
+    padding-right: 13px;
+  }
+  .gutter-left {
+    padding-left: 13px;
+  }
   .unit-l-hidden {
     display: none;
     visibility: hidden;
@@ -1387,28 +1393,49 @@ body {
   width: calc(100% - 42px);
   margin: 21px auto;
   background-color: white;
+  color: #d33f39;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+body a {
+  color: #d33f39;
+}
+
+header, #intro, #work figcaption, .max-width, footer p {
+  padding-top: 8.333333333%;
+  padding-bottom: 8.333333333%;
+  width: 83.33333334%;
+  margin: 0 auto;
+  max-width: 2360px;
 }
 
 .container {
   background-color: #ddf4f6;
-  padding: 8.333333333%;
 }
 
 p {
   margin-bottom: 1.3em;
+  line-height: 1.56;
 }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
   line-height: 1.56;
 }
 
 h1, .uno {
-  font-size: 3.0625rem;
+  font-size: 3.046875rem;
 }
 
 h2, .dos {
-  font-size: 1.945rem;
+  font-size: 1.25rem;
 }
 
 h3, .tres {
@@ -1466,48 +1493,304 @@ em {
   margin: 0 auto;
 }
 
+nav #salt-logo {
+  background-image: url(/images/salt.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  display: inline-block;
+  width: 100%;
+  height: 1.875rem;
+  text-indent: 9999px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 60em) {
+  nav #salt-logo {
+    width: 37.5%;
+  }
+}
+
+nav ul {
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 60em) {
+  nav ul {
+    width: 62%;
+  }
+}
+
 nav ul li {
   display: inline-block;
+  width: 25%;
+}
+
+nav ul li:last-child {
+  width: auto;
 }
 
 nav ul li a {
   text-decoration: none;
+  line-height: 1;
   font-size: 1rem;
+  color: #464646;
 }
 
 nav .instagram-link {
   font-size: .875rem;
   letter-spacing: 0.04em;
+  margin-top: 0.75rem;
+  /*@media only screen and (min-width: 38em) {
+            margin-top: 0rem;
+        }*/
+}
+
+nav .instagram-link i {
+  margin-right: 8px;
+}
+
+#intro h1, #intro .dos {
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 36em) {
+  #intro h1, #intro .dos {
+    font-size: 1.945rem;
+  }
+}
+
+#intro .vertical-link {
+  display: block;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+  #intro .vertical-link {
+    display: inline-block;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    margin-left: -4rem;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+  }
+}
+
+#work figcaption {
+  padding-top: 3.125%;
+  padding-bottom: 11.11%;
+}
+
+#work figcaption aside:nth-child(2) {
+  margin-top: .75rem;
+}
+
+#work figcaption aside:nth-child(2) p {
+  font-size: 1rem;
+  margin-bottom: .75rem;
+}
+
+#work figcaption aside:nth-child(2) a {
+  font-size: .8rem;
+}
+
+@media only screen and (min-width: 60em) {
+  #work figcaption {
+    padding-top: 11.11%;
+    padding-bottom: -webkit-calc(11.11% - 2.675rem);
+    padding-bottom: calc(11.11% - 2.675rem);
+  }
+  #work figcaption aside:first-child {
+    margin-top: -5.35rem;
+  }
+  #work figcaption aside:nth-child(2) {
+    margin-top: 0rem;
+  }
+  #work figcaption aside:nth-child(2) p {
+    font-size: 1.25rem;
+    margin-bottom: .75rem;
+  }
+  #work figcaption aside:nth-child(2) a {
+    font-size: 1rem;
+  }
 }
 
 #work figcaption h2 a {
   text-decoration: none;
+  letter-spacing: -0.025em;
 }
 
 #work figcaption h3 {
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  width: 75%;
+  margin-top: .75rem;
 }
 
-.team figcaption h3 {
+#about {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #464646;
+}
+
+#about a {
+  color: #464646;
+}
+
+#about .about-bottom {
+  margin-top: 6rem;
+  padding-top: 3.25rem;
+  border-top: dotted 1px #464646;
+}
+
+#about #contact h1, #about #contact h2 {
+  margin-bottom: 1rem;
+}
+
+#about #contact ul {
+  list-style-type: none;
+}
+
+#about #contact ul li {
+  line-height: 1.56;
+}
+
+#about #contact ul li:last-child {
+  margin-top: .75rem;
+}
+
+#about #contact ul i {
+  margin-right: 8px;
+}
+
+@media only screen and (min-width: 60em) {
+  #about #contact {
+    width: -webkit-calc(50% - .85rem);
+    width: calc(50% - .85rem);
+  }
+}
+
+#about #team figure {
+  margin-top: 1.3333rem;
+}
+
+#about #team figure:nth-child(3) {
+  margin-top: 2.66666rem;
+}
+
+#about #team figure:nth-child(4) {
+  margin-top: 2.66666rem;
+}
+
+#about #team figure img {
+  width: 3.75rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 60em) {
+  #about #team figure {
+    width: 75%;
+  }
+}
+
+#about #team figure figcaption {
+  width: -webkit-calc(100%-4.75rem);
+  width: calc(100%-4.75rem);
+  margin-left: 4.75rem;
+  margin-top: -4.495rem;
+  display: inline-block;
+}
+
+#about #team figure figcaption h3 {
   font-size: .8rem;
   text-decoration: underline;
   display: inline;
 }
 
-.team figcaption p {
+#about #team figure figcaption p {
+  font-size: .8rem;
   display: inline;
 }
 
-.team figcaption ul li {
+#about #team figure figcaption ul {
+  margin-top: .75rem;
+}
+
+#about #team figure figcaption ul li {
   display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: .75rem;
+  overflow: hidden;
+}
+
+#about #team figure figcaption ul li a {
+  text-decoration: none;
+}
+
+#about #team figure figcaption ul li:first-child {
+  padding-top: 1px;
+}
+
+#about #services h2 {
+  margin-bottom: 1rem;
+  margin-top: 1.75rem;
+}
+
+@media only screen and (min-width: 60em) {
+  #about #services .no-margin-top {
+    margin-top: 0;
+  }
+}
+
+#about #services ul {
+  list-style-type: none;
+}
+
+#about #services ul li {
+  position: relative;
+  line-height: 2;
+  margin-left: 1rem;
+}
+
+#about #services ul li:before {
+  content: '–';
+  position: absolute;
+  left: -1rem;
+}
+
+@media only screen and (min-width: 60em) {
+  #about #services .we-like {
+    margin-top: -7px;
+  }
+}
+
+#about #services .we-like li {
+  line-height: 2.5;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #464646;
+  text-align: center;
+}
+
+footer p {
+  font-size: .625rem;
+  text-transform: uppercase;
+  border-top: dotted 1px #464646;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url("http://www.justaddsalt.ca/salt-dev/font/salt-icons.eot?27115824");
-  src: url("http://www.justaddsalt.ca/salt-dev/font/salt-icons.eot?27115824#iefix") format("embedded-opentype"), url("http://www.justaddsalt.ca/salt-dev/font/salt-icons.woff?27115824") format("woff"), url("http://www.justaddsalt.ca/salt-dev/font/salt-icons.ttf?27115824") format("truetype"), url("http://www.justaddsalt.ca/salt-dev/font/salt-icons.svg?27115824#fontello") format("svg");
+  src: url("../font/fontello.eot?91561001");
+  src: url("../font/fontello.eot?91561001#iefix") format("embedded-opentype"), url("../font/fontello.woff?91561001") format("woff"), url("../font/fontello.ttf?91561001") format("truetype"), url("../font/fontello.svg?91561001#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1518,60 +1801,54 @@ nav .instagram-link {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?27115824#fontello') format('svg');
+    src: url('../font/fontello.svg?91561001#fontello') format('svg');
   }
 }
 */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "salt-icons";
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
+  color: #464646;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-instagram:before {
-  content: '\e800';
+  content: '\e059';
 }
 
-/* '' */
+/* '' */
 .icon-dribbble:before {
-  content: '\e801';
+  content: '\e060';
 }
 
-/* '' */
+/* '' */
 .icon-mail:before {
-  content: '\e802';
+  content: '\e061';
 }
 
-/* '' */
-.icon-mail-1:before {
-  content: '\e803';
-}
-
-/* '' */
+/* '' */
 .icon-linkedin:before {
-  content: '\e804';
+  content: '\e062';
 }
 
-/* '' */
+/* '' */
+.icon-mail-1:before {
+  content: '\e063';
+}
+
+/* '' */
