@@ -118,6 +118,17 @@ em {
     margin: 0 auto;
 }
 
+.arrow-bounce, .we-like a {
+    i {
+        margin-left: 0px;
+        -webkit-transition: all 120ms ease-in;
+        transition: all 120ms ease-in;
+    }
+    &:hover i {
+         margin-left: 10px;
+    }
+}
+
 nav {
     #salt-logo {
         background-image: url(/images/salt.svg);
@@ -142,7 +153,10 @@ nav {
         }
         li {
             display: inline-block;
-            width: 25%;
+            width: 32.05%;
+            @media only screen and (min-width: 60em) {
+                width: 25%;
+            }
             &:last-child {
                 width: auto;
             }
@@ -158,12 +172,23 @@ nav {
         font-size: .875rem;
         letter-spacing: 0.04em;
         margin-top: 0.75rem;
-        /*@media only screen and (min-width: 38em) {
-            margin-top: 0rem;
-        }*/
-        i {
-            margin-right: 8px;
+        a {
+            -webkit-transition: all 120ms ease-in;
+            transition: all 120ms ease-in;
+            i {
+                margin-right: 8px;
+                color: #464646;
+                -webkit-transition: all 120ms ease-in;
+                transition: all 120ms ease-in;
+            }
+            &:hover {
+                color: #d33f39;
+                i {
+                    color: #d33f39;
+                }
+            }
         }
+        
     }
 }
 
@@ -175,16 +200,41 @@ nav {
         }
     }
     .vertical-link {
-        display: block;
         margin-top: 1rem;
+        line-height: 1;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        padding-bottom: 0px;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            i {
+                display: inline-block;
+                margin-left: 0px;
+                -webkit-transition: all 120ms ease-in;
+                transition: all 120ms ease-in;
+            }
+            &:hover i {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
         @media only screen and (min-width: 38em) {
             display: inline-block;
             margin-top: 6rem;
             margin-bottom: 4rem;
-            margin-left: -4rem;
+            margin-left: 1.25rem;
+            float: left;
             -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
+            transform-origin: left top 0;
         }
+        @media only screen and (min-width: 60em) {
+            margin-bottom: -3.795rem;
+        }
+        
     }
 }
 
@@ -200,6 +250,12 @@ nav {
             }
             a {
                 font-size: .8rem;
+                line-height: 1;
+                display: inline-block;
+                text-decoration: none;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                padding-bottom: 0px;
             }
         }
         @media only screen and (min-width: 60em) {
@@ -258,6 +314,14 @@ nav {
             i {
                 margin-right: 8px;
             }
+            a {
+                margin-left: 0px;
+                -webkit-transition: all 120ms ease-in;
+                transition: all 120ms ease-in;
+                &:hover {
+                    margin-left: 10px;
+                }
+            }
         }
         @media only screen and (min-width: 60em) {
             width: calc(50% - .85rem);
@@ -304,6 +368,11 @@ nav {
                         overflow: hidden;
                         a {
                             text-decoration: none;
+                            -webkit-transition: all 120ms ease-in;
+                            transition: all 120ms ease-in;
+                            &:hover {
+                                color: #d33f39;
+                            }
                         }
                         &:first-child {
                             padding-top:  1px;
@@ -342,7 +411,15 @@ nav {
                 margin-top: -7px;
             }
             li {
-                line-height: 2.5;
+                line-height: 1;
+                margin-bottom: 1.25rem;
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    border-bottom-width: 1px;
+                    border-bottom-style: solid;
+                    padding-bottom: 0px;
+                }
             }
         }
     }
