@@ -1384,6 +1384,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   font-size: 100%;
   font-family: "letter-gothic-std", monospace;
   font-weight: 700;
@@ -1713,8 +1714,18 @@ nav .instagram-link a:hover i {
   border-top: dotted 1px #464646;
 }
 
+#about #contact {
+  /*@media only screen and (min-width: 60em) {
+            width: calc(50% - .85rem);
+        }*/
+}
+
 #about #contact h1, #about #contact h2 {
   margin-bottom: 1rem;
+}
+
+#about #contact p {
+  max-width: 35.5rem;
 }
 
 #about #contact ul {
@@ -1743,13 +1754,6 @@ nav .instagram-link a:hover i {
   margin-left: 10px;
 }
 
-@media only screen and (min-width: 60em) {
-  #about #contact {
-    width: -webkit-calc(50% - .85rem);
-    width: calc(50% - .85rem);
-  }
-}
-
 #about #team figure {
   margin-top: 1.3333rem;
 }
@@ -1764,8 +1768,16 @@ nav .instagram-link a:hover i {
 
 #about #team figure img {
   width: 3.75rem;
-  margin-right: 1rem;
-  display: inline-block;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media only screen and (min-width: 35em) {
+  #about #team figure img {
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 60em) {
@@ -1775,11 +1787,18 @@ nav .instagram-link a:hover i {
 }
 
 #about #team figure figcaption {
-  width: -webkit-calc(100%-4.75rem);
-  width: calc(100%-4.75rem);
-  margin-left: 4.75rem;
-  margin-top: -4.495rem;
-  display: inline-block;
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 35em) {
+  #about #team figure figcaption {
+    width: -webkit-calc(100% - 4.75rem);
+    width: calc(100% - 4.75rem);
+    margin-left: 4.75rem;
+    margin-top: -4.495rem;
+    display: inline-block;
+  }
 }
 
 #about #team figure figcaption h3 {
@@ -1799,6 +1818,7 @@ nav .instagram-link a:hover i {
 
 #about #team figure figcaption ul li {
   display: inline-block;
+  cursor: pointer;
   width: 1.25rem;
   height: 1.25rem;
   margin-right: .75rem;
@@ -1910,6 +1930,7 @@ footer p {
   font-variant: normal;
   text-transform: none;
   line-height: 1em;
+  cursor: pointer;
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
