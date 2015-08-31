@@ -161,6 +161,23 @@
     }
 }
 
+.twocol-img {
+    @media only screen and (min-width: 38em) {
+         .gutter-right {
+            padding-right: 9px;
+             .graphic {
+                 right: 9px;
+             }
+         }
+         .gutter-left {
+            padding-left: 9px;
+             .graphic {
+                 left: 9px;
+             }
+         }
+    }
+}
+
 .push-top {
     margin-top: 18px;
 }

@@ -2216,6 +2216,21 @@ footer p {
   }
 }
 
+@media only screen and (min-width: 38em) {
+  .twocol-img .gutter-right {
+    padding-right: 9px;
+  }
+  .twocol-img .gutter-right .graphic {
+    right: 9px;
+  }
+  .twocol-img .gutter-left {
+    padding-left: 9px;
+  }
+  .twocol-img .gutter-left .graphic {
+    left: 9px;
+  }
+}
+
 .push-top {
   margin-top: 18px;
 }
