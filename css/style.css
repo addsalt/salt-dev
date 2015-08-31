@@ -2340,3 +2340,13 @@ blockquote cite:after {
     margin-top: 17rem;
   }
 }
+
+.project-info figure {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.project-info figure figcaption p {
+  font-size: .64rem;
+  margin-top: 6px;
+}
